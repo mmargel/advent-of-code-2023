@@ -14,7 +14,7 @@ const findSolution = (_values: string[]) : number => {
 
 // Solution: ???
 export const solvePart = () =>
-  runTest({ day: ${day}, part: ${part}, testMethod: findSolution, test: true });
+  runTest({ day: ${day}, part: ${part}, testMethod: findSolution, actual: false });
 `;
 
 const createPart = (day, part) => {

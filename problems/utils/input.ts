@@ -2,20 +2,20 @@ import { readFileSync } from "fs";
 
 export interface InputArgs {
   day: number;
-  test: boolean;
+  actual: boolean;
   allowComments: boolean;
 }
 
-export const getTestInput = ({
+export const getProblemInput = ({
   day,
-  test = false,
+  actual = false,
   allowComments = true,
 }: InputArgs) => {
   const inputPath = [
     ".",
     "data",
     `day${day}`,
-    test ? "test.txt" : "input.txt",
+    actual ? "input.txt" : "test.txt",
   ].join("/");
 
   return readFileSync(inputPath)
